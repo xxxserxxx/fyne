@@ -21,6 +21,12 @@ as well as providing much simpler ways to write custom widgets.
 We are now working towards 1.3 which will add data binding and some more advanced
 widgets such as tables and lists.
 
+## About this fork
+
+I maintain this for my own code changes which may (or may not) be accepted upstream.  Among these are:
+
+- A `lib-version` command on the `fyne` tool, which tells you which version of the `fyne` library is being used by a project.  This should be the same as information in `go.mod`, but this provides a programmatic verification by using the Go packaging API.
+
 # Prerequisites
 
 To develop apps using Fyne you will need Go version 1.12 or later, a C compiler and your system's development tools.
