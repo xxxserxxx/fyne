@@ -19,21 +19,11 @@ type versioner struct {
 }
 
 func (v *versioner) run(_ []string) {
-	err := v.validate()
-	if err != nil {
-		fmt.Fprintln(os.Stderr, err.Error())
-		os.Exit(1)
-	}
-
-	err = v.doVersion()
+	err := v.doVersion()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "%s\n", err.Error())
 		os.Exit(1)
 	}
-}
-
-func (v *versioner) validate() error {
-	return nil
 }
 
 func (v *versioner) doVersion() error {
